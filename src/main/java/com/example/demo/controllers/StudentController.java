@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("")
 public class StudentController {
 
     @Autowired
     private StudentService studentService;
 
-    @GetMapping(value = "/student")
+    @GetMapping
     public List<Student> findAll(){
         return studentService.findAll();
     }
